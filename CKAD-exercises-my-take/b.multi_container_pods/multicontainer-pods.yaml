@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    command: ["/bin/sh", "-c", "echo hello; sleep 3600"]
+  - name: nginx-sidecar
+    image: nginx
+    command: ["/bin/sh", "-c", "echo hello; sleep 3600"]
